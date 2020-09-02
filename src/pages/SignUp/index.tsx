@@ -4,15 +4,14 @@ import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 import { Link, useHistory } from 'react-router-dom';
+import { GiTakeMyMoney } from 'react-icons/gi';
 import api from '../../services/api';
 import { useToast } from '../../hooks/toast';
-
-import logoImg from '../../assets/logo.svg';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, Content, Background, AnimationContainer } from './styles';
+import { Container, Content, AnimationContainer } from './styles';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 interface SignUpFormData {
@@ -72,10 +71,12 @@ const SignUp: React.FC = () => {
 
   return (
     <Container>
-      <Background />
       <Content>
         <AnimationContainer>
-          <img src={logoImg} alt="GoBarber" />
+          <div>
+            <h1>Finance Planner</h1>
+            <GiTakeMyMoney size={80} color="#F3E0EC" />
+          </div>
 
           <Form ref={formRef} onSubmit={handleSubmit}>
             <h1>Faça seu cadastro</h1>

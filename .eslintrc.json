@@ -39,6 +39,7 @@
       "no-unused-expressions": "off",
       "@typescript-eslint/ban-types": "off",
       "prettier/prettier": "error",
+      "camelcase": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
